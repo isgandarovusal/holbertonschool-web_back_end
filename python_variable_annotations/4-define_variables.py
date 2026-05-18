@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
-"""Define and annotate variables."""
+"""define and annotate the variables"""
 
 
-school: str = "Holberton"
+a: int = 1
 pi: float = 3.14
 i_understand_annotations: bool = True
-
-# Tip təyinatı və qiyməti ayırırıq ki, checker 'a = ' hissəsini rahatlıqla tapıb dəyişə bilsin
-a: int
-a = 89
+school: str = "Holberton"
