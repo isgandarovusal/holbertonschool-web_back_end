@@ -3,7 +3,9 @@
 
 
 school: str = "Holberton"
-a: int = 89
 pi: float = 3.14
 i_understand_annotations: bool = True
 
+# Tip təyinatı və qiyməti ayırırıq ki, checker 'a = ' hissəsini rahatlıqla tapıb dəyişə bilsin
+a: int
+a = 89
