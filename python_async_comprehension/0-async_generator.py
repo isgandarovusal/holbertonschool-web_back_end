@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-This module provides an asynchronous generator coroutine that loops 10 times,
-waiting asynchronously for 1 second each time, and yielding a random float number.
+This module provides an asynchronous generator coroutine that loops
+10 times, waiting asynchronously for 1 second each time, and
+yielding a random float number.
 """
 import asyncio
 import random
