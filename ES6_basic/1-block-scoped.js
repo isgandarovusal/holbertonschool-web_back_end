@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars, prefer-const */
 export default function taskBlock(trueOrFalse) {
-  const task = false;
-  const task2 = 'is any';
+  let task = false;
+  let task2 = 'is any';
 
   if (trueOrFalse) {
-    const task = true; // eslint-disable-line no-unused-vars
-    const task2 = 'is none'; // eslint-disable-line no-unused-vars
+    let task = true;
+    let task2 = 'is none';
   }
 
   return [task, task2];
