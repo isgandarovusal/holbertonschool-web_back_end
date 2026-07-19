@@ -10,7 +10,7 @@ function countStudents(path) {
 
       const lines = data.trim().split('\n');
       const students = lines.slice(1).filter((line) => line.trim().length > 0);
-      
+
       console.log(`Number of students: ${students.length}`);
 
       const fields = {};
