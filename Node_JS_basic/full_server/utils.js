@@ -8,21 +8,32 @@ export function readDatabase(path) {
         return;
       }
 
-      const lines = data.trim().split('\n');
-      const students = lines.slice(1).filter((line) => line.trim().length > 0);
-      
-      const fields = {};
-      students.forEach((student) => {
-        const studentData = student.split(',');
-        const firstName = studentData[0];
-        const field = studentData[3];
+      const content = data.trim().split('\n').filter((line) => line.trim().length > 0);
 
-        if (!fields[field]) {
-          fields[field] = [];
+      if (content.length <= 1) {
+        resolve({});
+        return;
+      }
+
+      const lines = content.slice(1);
+      const students = {};
+
+      lines.forEach((line) => {
+        const fields = line.split(',');
+        if (fields.length >= 4) {
+          const firstname = fields[0].trim();
+          const field = fields[3].trim();
+
+          if (!students[field]) {
+            students[field] = [];
+          }
+          students[field].push(firstname);
         }
-        fields[field].push(firstName);
       });
-      resolve(fields);
+
+      resolve(students);
     });
   });
 }
+
+export default readDatabase;
